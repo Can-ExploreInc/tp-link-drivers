@@ -41,14 +41,14 @@ DRV_VERSION="5.13.1"
 
 OPTIONS_FILE="${MODULE_NAME}.conf"
 
-KARCH="$(uname -m)"
+KARCH="aarch64"
 #if [ -z "${KARCH+1}" ]; then
-#	KARCH="$(uname -m)"
+#	KARCH="aarch64"
 #fi
 
-KVER="$(uname -r)"
+KVER="6.1.21-v8+"
 #if [ -z "${KVER+1}" ]; then
-#	KVER="$(uname -r)"
+#	KVER="6.1.21-v8+"
 #fi
 
 MODDESTDIR="/lib/modules/${KVER}/kernel/drivers/net/wireless/"

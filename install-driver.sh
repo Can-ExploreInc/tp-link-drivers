@@ -42,21 +42,21 @@ DRV_DIR="$(pwd)"
 
 OPTIONS_FILE="${MODULE_NAME}.conf"
 
-KARCH="$(uname -m)"
+KARCH="aarch64"
 #if [ -z "${KARCH+1}" ]; then
-#	KARCH="$(uname -m)"
+#	KARCH="aarch64"
 #fi
 
-KVER="$(uname -r)"
+KVER="6.1.21-v8+"
 #if [ -z "${KVER+1}" ]; then
-#	KVER="$(uname -r)"
+#	KVER="6.1.21-v8+"
 #fi
 
 MODDESTDIR="/lib/modules/${KVER}/kernel/drivers/net/wireless/"
 
-GARCH="$(uname -m | sed -e "s/i.86/i386/; s/ppc/powerpc/; s/armv.l/arm/; s/aarch64/arm64/; s/riscv.*/riscv/;")"
+GARCH="$(echo "aarch64" | sed -e "s/i.86/i386/; s/ppc/powerpc/; s/armv.l/arm/; s/aarch64/arm64/; s/riscv.*/riscv/;")"
 #if [ -z "${GARCH+1}" ]; then
-#	GARCH="$(uname -m | sed -e "s/i.86/i386/; s/ppc/powerpc/; s/armv.l/arm/; s/aarch64/arm64/; s/riscv.*/riscv/;")"
+#	GARCH="$(echo "aarch64" | sed -e "s/i.86/i386/; s/ppc/powerpc/; s/armv.l/arm/; s/aarch64/arm64/; s/riscv.*/riscv/;")"
 #fi
 
 # check to ensure sudo or su - was used to start the script
@@ -109,7 +109,7 @@ if ! command -v make >/dev/null 2>&1; then
 fi
 
 # check to see if the correct header files are installed
-if [ ! -d "/lib/modules/$(uname -r)/build" ]; then
+if [ ! -d "/lib/modules/6.1.21-v8+/build" ]; then
 	echo "Your kernel header files aren't properly installed."
 	echo "Please consult your distro documentation or user support forums."
 	echo "Once the header files are properly installed, please run \"sudo ./${SCRIPT_NAME}\""
