@@ -313,7 +313,7 @@ sudo apt install -y raspberrypi-kernel-headers build-essential bc dkms git
 - Option for Debian, Kali, and Raspberry Pi Desktop (x86)
 
 ```
-sudo apt install -y linux-headers-6.6.20+rpt-rpi-v8 build-essential bc dkms git libelf-dev rfkill iw
+sudo apt install -y linux-headers-6.6.31+rpt-rpi-v8 build-essential bc dkms git libelf-dev rfkill iw
 ```
 
 - Option for Ubuntu (all official flavors) and the numerous Ubuntu based distros
