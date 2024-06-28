@@ -1395,7 +1395,7 @@ SUBARCH := $(shell echo "aarch64" | sed -e "s/i.86/i386/; s/ppc/powerpc/; s/armv
 ARCH ?= $(SUBARCH)
 
 CROSS_COMPILE ?=
-KVER ?= 6.1.21-v8+
+KVER ?= 6.6.31+rpt-rpi-v8
 KSRC := /lib/modules/$(KVER)/build
 MODDESTDIR := /lib/modules/$(KVER)/kernel/drivers/net/wireless/
 INSTALL_PREFIX :=
@@ -1414,7 +1414,7 @@ EXTRA_CFLAGS += -DCONFIG_IOCTL_CFG80211 -DRTW_USE_CFG80211_STA_EVENT
 SUBARCH := $(shell echo "aarch64" | sed -e s/i.86/i386/)
 ARCH ?= $(SUBARCH)
 CROSS_COMPILE ?=
-KVER := 6.1.21-v8+
+KVER := 6.6.31+rpt-rpi-v8
 KSRC := /lib/modules/$(KVER)/build
 MODDESTDIR := /lib/modules/$(KVER)/kernel/drivers/net/wireless/
 INSTALL_PREFIX :=
@@ -1447,7 +1447,7 @@ EXTRA_CFLAGS += -DCONFIG_IOCTL_CFG80211 -DRTW_USE_CFG80211_STA_EVENT
 ARCH ?= arm
 
 CROSS_COMPILE ?=
-KVER := 6.1.21-v8+
+KVER := 6.6.31+rpt-rpi-v8
 KSRC := /lib/modules/$(KVER)/build
 MODDESTDIR := /lib/modules/$(KVER)/kernel/drivers/net/wireless/
 INSTALL_PREFIX :=
@@ -1709,7 +1709,7 @@ ifeq ($(CONFIG_PLATFORM_MOZART), y)
 EXTRA_CFLAGS += -DCONFIG_LITTLE_ENDIAN -DCONFIG_PLATFORM_MOZART
 ARCH := arm
 CROSS_COMPILE := /home/vivotek/lsp/mozart3v2/Mozart3e_Toolchain/build_arm_nofpu/usr/bin/arm-linux-
-KVER  := 6.1.21-v8+
+KVER  := 6.6.31+rpt-rpi-v8
 KSRC:= /opt/Vivotek/lsp/mozart3v2/kernel_platform/kernel/mozart_kernel-1.17
 KERNELOUTPUT := /home/pink/sample/ODM/IP8136W-VINT/tmp/kernel
 endif

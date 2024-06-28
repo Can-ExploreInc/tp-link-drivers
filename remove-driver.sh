@@ -46,9 +46,9 @@ KARCH="aarch64"
 #	KARCH="aarch64"
 #fi
 
-KVER="6.1.21-v8+"
+KVER="6.6.31+rpt-rpi-v8"
 #if [ -z "${KVER+1}" ]; then
-#	KVER="6.1.21-v8+"
+#	KVER="6.6.31+rpt-rpi-v8"
 #fi
 
 MODDESTDIR="/lib/modules/${KVER}/kernel/drivers/net/wireless/"

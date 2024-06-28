@@ -19,5 +19,5 @@ if [ "$sproc" -gt 1 ]; then
 	fi
 fi
 
-kernelver=${kernelver:-6.1.21-v8+}
+kernelver=${kernelver:-6.6.31+rpt-rpi-v8}
 make "-j$sproc" "KVER=$kernelver" "KSRC=/lib/modules/$kernelver/build"
