@@ -47,9 +47,9 @@ KARCH="aarch64"
 #	KARCH="aarch64"
 #fi
 
-KVER="6.6.31+rpt-rpi-v8"
+KVER="6.1.21-v8+"
 #if [ -z "${KVER+1}" ]; then
-#	KVER="6.6.31+rpt-rpi-v8"
+#	KVER="6.1.21-v8+"
 #fi
 
 MODDESTDIR="/lib/modules/${KVER}/kernel/drivers/net/wireless/"
@@ -109,7 +109,7 @@ if ! command -v make >/dev/null 2>&1; then
 fi
 
 # check to see if the correct header files are installed
-if [ ! -d "/lib/modules/6.6.31+rpt-rpi-v8/build" ]; then
+if [ ! -d "/lib/modules/6.1.21-v8+/build" ]; then
 	echo "Your kernel header files aren't properly installed."
 	echo "Please consult your distro documentation or user support forums."
 	echo "Once the header files are properly installed, please run \"sudo ./${SCRIPT_NAME}\""
